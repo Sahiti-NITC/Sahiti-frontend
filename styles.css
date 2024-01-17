@@ -3,6 +3,7 @@
 }
 
 body{
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -69,10 +70,40 @@ body{
   color: transparent;
   
 }
+/*//////////////Swiper/////////////*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet {
+  background-color: #FFFDD0;
+  display: inline-block;
+  transform: scale(0.8);
 
+  animation: 2s;
+}
 
+.swiper-pagination-bullet-active {
+
+  background-color: #FFFDD0; 
+  scale: 1.5;
+}
 
 /*///////////////////////////////// frame2/////////////////////////////////////////*/
 
@@ -123,54 +154,37 @@ body{
 
 /*////////////////////////////////////////////*/
 
-.menu {
--webkit-touch-callout: none;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
---marquee-width: 100vw;
---offset: 0vw;
---move-initial: calc(-25% + var(--offset));
---move-final: calc(-50% + var(--offset));
---item-font-size: 10vw;
-counter-reset: menu;
-  background-color: #E97451;
-  width: 100vw;
-}
-
-/* Make sure 3 items are visible in the viewport by setting suitable font size. */
-
 .marquee {
-width: var(--marquee-width);
-overflow: hidden;
-pointer-events: none;
+  height:100px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
 }
 
-.marquee__inner {
-width: fit-content;
-display: flex;
-position: relative;
-transform: translate3d(var(--move-initial), 0, 0);
-animation: marquee 5s linear infinite;
-animation-play-state: paused;
-opacity: 0;
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
 }
 
-.marquee .marquee__inner {
-animation-play-state: running;
-opacity: 1;
-transition-duration: 0.4s;
-
+.marquee img{
+  float: left;
+  min-height: 20px;
 }
 
-.marquee img {
-  height: 6vh;
-  padding: 2vh;
-  padding-left: 5vw;
-  background-color: #E97451;
-  margin: 0%;
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
 }
+
+
+
 /*////////////////////////////////////////////////////////////////////////////*/
 .frame3{
 display: flex;
@@ -179,12 +193,12 @@ justify-content: space-between;
 
 }
 .frame3 img{
-  width:100vw;
+  width:100%;
   margin: 0;
   padding: 0%;
   position: absolute;
   z-index: -1;
-  align-self: flex-start;
+
 }
 .frame3_textbox{
   display: flex;
@@ -195,7 +209,7 @@ justify-content: space-between;
   width:90%;
 }
 .frame3_text{
-  font-size: 1.1rem;
+  font-size: 0.95em;
   color: #FFFDD0;
   font-family: 'Libre Caslon Text';
 }
@@ -213,11 +227,6 @@ justify-content: space-between;
   color: #FFFDD0;
   padding: 20px;
   text-align: center;
-}
-
-.marquee2{
-top: 200px;
-left: 200px;
 }
 
 

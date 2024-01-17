@@ -13,7 +13,7 @@ Home page elements:
 - [x] Frame 2 : CCAR
 - [x] Orange Marquee
 - [x] Frame 3: LnD
-- [x] White Marquee
+- [ ] White Marquee
 - [ ] Discover the festival: Card catalogue
 - [ ] Orange Marquee
 - [ ] Frame 4: #undecided

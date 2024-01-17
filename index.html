@@ -5,29 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahiti</title>
 
+    <link rel="icon" type="image/png" href="./assets/lnd logo 1.png"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./navbar.css" class="">
+    <link rel="stylesheet" href="./elements/navbar.css" class="">
+
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 </head>
-<body>
-<!--///////////////////////////////////////////Expand reveal///////////-->
-
-<div class="layerz">
-    <div class="container">
-        <div class="artboard" id="artboard" onclick="toggleActive()">
-            <h1 class="entry_text">Welcome to Sahiti</h1>
-        </div>  
-    </div>
-</div>
-  
-
-
-    
+<body>    
     <nav>
         <ul class="sidebar">
             <li onclick="hideSidebar()"><a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
@@ -46,45 +40,64 @@
             <li onclick="showSidebar()"><a href="#" class="nav-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     </nav>
+    <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+      <div class="swiper-slide"><img src="./assets/Frame1.png" alt=""></div>
+    </div>
+    <div class="swiper-button-next" style="color:#FFFDD0;"></div>
+    <div class="swiper-button-prev" style="color:#FFFDD0;"></div>
+    <div class="swiper-pagination" ></div>
+  </div>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+    
 
     <!--///////////////////////////////////////////////Frame1////////////////////////-->
-    <img src="./assets/Frame1.png" alt="" class="frame1" style="width:100vw">
-
+    
     <div class="frame2">
         <img src="./assets/ccar logo 1.png" alt="" class="CCAR_logo">
             <h1 class="frame2_text">In Collaboration with the 
-            <span class="line2">Centre for Cultural and Art Relations</span> 
-            <div class="span">NIT Calicut</div>
+              <span class="line2">Centre for Cultural and Art Relations</span> 
+              <span>NIT Calicut</span>
             </h1>
-
             <div class="frame2_btn">
                 <span class="text">Know more</span>
             </div>
     </div>
+    
     <!--/////////////////////////Frame2//////////////////////////////-->
-    <nav class="menu">
-        <div class="menu__item">
-          <div class="marquee">
-            <div class="marquee__inner">
-              <img src="./assets/scroll_svg/Vector-3.png" alt="">
-              <img src="./assets/scroll_svg/Vector-4.png" alt="">
-              <img src="./assets/scroll_svg/Vector-5.png" alt="">
-              <img src="./assets/scroll_svg/Vector-6.png" alt="">
-              <img src="./assets/scroll_svg/Vector-7.png" alt="">
-              <img src="./assets/scroll_svg/Vector-8.png" alt="">
-              <img src="./assets/scroll_svg/Vector-10.png" alt="">
-              <img src="./assets/scroll_svg/Vector-11.png" alt="">
-              <img src="./assets/scroll_svg/Vector-12.png" alt="">
-              <img src="./assets/scroll_svg/Vector-13.png" alt="">
-              <img src="./assets/scroll_svg/Vector-14.png" alt="">
-              <img src="./assets/scroll_svg/Vector-15.png" alt="">
-              <img src="./assets/scroll_svg/Vector-16.png" alt="">
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    
+      
     <div class="frame3" >
         <img src="./assets/webtt1-01 1.png" alt="frame3_img" class="frame3_img">
         <div class="frame3_textbox">
@@ -99,42 +112,9 @@
                     <span>Know More</span>
                 </a>
             </div>
-            
         </div>
-        
     </div>
-
-    <nav class="menu">
-        <div class="menu__item">
-          <div class="marquee">
-            <div class="marquee__inner">
-              <img src="./assets/scroll_svg/Vector-6.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-7.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-8.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-10.png" alt="">
-              <img src="./assets/scroll_svg/Vector-11.png" alt="">
-              <img src="./assets/scroll_svg/Vector-12.png" alt="">
-              <img src="./assets/scroll_svg/Vector-3.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-4.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-5.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-6.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-7.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-8.png"  alt="">
-              <img src="./assets/scroll_svg/Vector-10.png" alt="">
-              <img src="./assets/scroll_svg/Vector-11.png" alt="">
-              <img src="./assets/scroll_svg/Vector-12.png" alt="">
-              <img src="./assets/scroll_svg/Vector-13.png" alt="">
-              <img src="./assets/scroll_svg/Vector-14.png" alt="">
-              <img src="./assets/scroll_svg/Vector-15.png" alt="">
-              <img src="./assets/scroll_svg/Vector-16.png" alt="">
-            </div>
-          </div>
-        </div>
-      </nav>
-
-    
-
-
+ 
     <script>
         function showSidebar(){
             document.querySelector('.sidebar').style.display = 'flex';

@@ -46,9 +46,10 @@ nav li{
 nav a:hover{
     background-color: #E97451;
     color: #FFFDD0;
-    transition: 0.3s;
+    transition: 0.2s;
 
 }
+
 
 nav li:first-child{
     margin-right: auto;
@@ -61,16 +62,18 @@ nav li:first-child{
 
     top:0;
     right:0;
-    height:100vh;
-    width:250px;
+    height:max-content;
+    width:fit-content;
     z-index:999;
     background-color: #FFFDD0;
-    
+    border-radius: 10px 10px 10px 10px;
 
     display: flex;
     flex-direction: column;
     align-items:  flex-start;
     justify-content: flex-start;
+
+    border: #E97451 solid 2px;
 
     display: none;
 
@@ -86,18 +89,21 @@ nav li:first-child{
 
 .sidebar a:hover{
     background-color:#E97451;
+    transition: 0.2s;
 }
 
 
-    @media(max-width: 914px){
-        .hideOnMobile{
-            display: none;
-        }
-        .mid-section{
-            flex-direction: column;
-            align-items: center;
-        }
-        .boy-on-books{
-            position: relative;
-        }
+@media(max-width: 914px){
+    .hideOnMobile{
+        display: none;
     }
+}
+
+@media(max-width: 490px){
+    .home{
+        height: 20vw;
+
+        
+    }
+}
+    
