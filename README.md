@@ -1,5 +1,11 @@
 # Sahiti : A website for the Literary festival of NITC
 
+colors:
+
+```css
+#FFFDD0; cream
+#E97451; orange
+```
 ![Sahiti logo](<assets/image 2.png>)
 
 ## This repo deals with most of the front end elements of the site.
